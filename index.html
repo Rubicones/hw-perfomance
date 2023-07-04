@@ -267,7 +267,17 @@
                 TABS.all.items = [...TABS.all.items, ...TABS.all.items];
             }
             const TABS_KEYS = Object.keys(TABS);
-
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
             function Main() {
                 const ref = React.useRef();
                 const initedRef = React.useRef(false);
@@ -295,7 +305,8 @@
                 };
 
                 React.useEffect(() => {
-                    const handleResize = _.debounce(() => {
+                    // Use your debounce function
+                    const handleResize = debounce(() => {
                         const sumWidth = sizes.reduce(
                             (acc, item) => acc + item.width,
                             0
