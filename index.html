@@ -295,7 +295,6 @@
                 };
 
                 React.useEffect(() => {
-                    // Debounce the scroll event
                     const handleResize = _.debounce(() => {
                         const sumWidth = sizes.reduce(
                             (acc, item) => acc + item.width,
