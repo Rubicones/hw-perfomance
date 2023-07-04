@@ -211,16 +211,20 @@
         const initedRef = React.useRef(false);
         const [activeTab, setActiveTab] = React.useState('');
         const [hasRightScroll, setHasRightScroll] = React.useState(false);
+        const memoizedSetActiveTab = React.useCallback(
+        (key) => setActiveTab(key),
+        [],
+        );
 
         React.useEffect(() => {
             if (!activeTab && !initedRef.current) {
                 initedRef.current = true;
-                setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
+                memoizedSetActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
             }
         });
 
         const onSelectInput = event => {
-            setActiveTab(event.target.value);
+            memoizedSetActiveTab(event.target.value);
         };
 
         let sizes = [];
@@ -363,7 +367,7 @@
                                 className={'section__tab' + (key === activeTab ? ' section__tab_active' : '')}
                                 id={`tab_${key}`}
                                 aria-controls={`panel_${key}`}
-                                onClick={() => setActiveTab(key)}
+                                onClick={() => memoizedSetActiveTab(key)}
                             >
                                 {TABS[key].title}
                             </li>
