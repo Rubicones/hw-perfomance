@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hw-perfomance/static/css/main.0d1bc360.css",
+    "main.css": "/hw-perfomance/static/css/main.a445ec08.css",
     "main.js": "/hw-perfomance/static/js/main.931ff6ff.js",
-    "static/media/bg@2x.png": "/hw-perfomance/static/media/bg@2x.b23d48f2e17f0ebd4d42.png",
+    "static/media/bg@2x.webp": "/hw-perfomance/static/media/bg@2x.86f35448ef3226b5b7e4.webp",
     "static/media/lato.woff2": "/hw-perfomance/static/media/lato.be36596da218e1eec01c.woff2",
     "static/media/icon_sun.svg": "/hw-perfomance/static/media/icon_sun.ab45bd1abea4a81765bb.svg",
     "static/media/arrow-down.svg": "/hw-perfomance/static/media/arrow-down.d655218a2b02d5911247.svg",
@@ -14,11 +14,11 @@
     "static/media/icon_list_m@1x.svg": "/hw-perfomance/static/media/icon_list_m@1x.2c481f94300218fcebd0.svg",
     "static/media/icon_scheduled.svg": "/hw-perfomance/static/media/icon_scheduled.71bbb008775a1c81db81.svg",
     "index.html": "/hw-perfomance/index.html",
-    "main.0d1bc360.css.map": "/hw-perfomance/static/css/main.0d1bc360.css.map",
+    "main.a445ec08.css.map": "/hw-perfomance/static/css/main.a445ec08.css.map",
     "main.931ff6ff.js.map": "/hw-perfomance/static/js/main.931ff6ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d1bc360.css",
+    "static/css/main.a445ec08.css",
     "static/js/main.931ff6ff.js"
   ]
 }
